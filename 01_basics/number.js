@@ -5,7 +5,7 @@
 // console.log(balance)
 
 // console.log(balance.toPrecision(2))
-// const price = 1000000l
+// const price = 1000000
 // console.log(price.toLocaleString('en-IN'))
 
 
