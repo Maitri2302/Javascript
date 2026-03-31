@@ -1,89 +1,137 @@
-const arr=[1,2,3,4,5];
-for (const val of arr) {
-    console.log(val)
-}
-const greeting="Hello World"
-for (const letters of greeting) {
-    console.log(`Each char is ${letters}`)
-}
-const map=new Map()
-map.set('IN',"India")
-map.set('USA',"United States Of America")
-map.set('FR',"France")
-console.log(map)
+//for of
+// const arr =[1,2,3,4,5]
+// for(const val of arr){
+//     console.log(val)
+// }
 
-for (const key of map) {
+// const greetings="Hello World"
+// for(const greet of greetings){
+//     console.log(`Eah character of greetings is ${greet}`)
+// }
+
+const map = new Map()
+map.set('IN',"India")
+map.set('US',"United States of Americs")
+map.set('Uk',"United Kingdom")
+// console.log(map);
+// for(const [key,value] of map){
+//     console.log(key,':-',value);
+// }
+for(const key in map){
     console.log(key)
 }
 
-for(const [key,value] of map){
-    console.log(key,':-',value)
+const myObject={
+    'game1':'NFS',
+    'game2':'Spiderman'
 }
-
-//for in loops
-const myObj={
-    'game1':"Candy Crush",
-    'game2' : "Clash of Clans"
-}
-for (const key in myObj) {
-    console.log(key);
-    console.log(myObj[key]);
-}
-
-const lang=["cpp","js","py","ruby"]
-for(const key in lang){
-    console.log(key);
-    console.log(lang[key])
-}
-
-// const map2=new Map()
-// map.set('js',"Javascript")
-// map.set('cpp',"C++")
-// map.set('json',"javascript object notation")
-// for(const key in Map){
-//     console.log(key)
+// for (const [key,value] of myObject) {
+//     console.log(key,':-',value);
+// }
+// for (const key in myObject) {
+//     console.log(key,':-',myObject[key]);
+// }
+// const programming=["js","java","c","cpp"]
+// for(const lang in programming){
+//     console.log(lang,':-',programming[lang])
 // }
 
- const code=["js","ruby","cpp","python"]
-// code.forEach( function (item) {
-//     console.log(item)
-// } )
-
-// code.forEach((val)=>{
+const programming=["js","java","c","cpp"]
+// programming.forEach( function (val) {
 //     console.log(val)
 // })
 
-// function printMe (item){
-//     console.log(item)
+// programming.forEach((val)=>{
+//     console.log(val)
+// })
+
+// function printMe(item){
+//     console.log(item);
 // }
-// code.forEach(printMe)
+// programming.forEach(printMe)
 
-code.forEach((item, index, arr)=> {
-    console.log(item,index,arr)
-})
+// programming.forEach((item,index,arr)=>{
+//     console.log(item,index,arr)
+// })
 
-const codingLang=[
+const coding=[
     {
-        langName:"javascript",
-        langNotation:"js"
+        languageNmae:"java",
+        languagefileName:"java"
     },
     {
-        langName:"C++",
-        langNotation:"Cpp"
+        languageNmae:"javascript",
+        languagefileName:"js"
     },
     {
-        langName:"python",
-        langNotation:"py"
+        languageNmae:"python",
+        languagefileName:"py"
     }
 ]
-codingLang.forEach( (item) => {
-    console.log(item.langNotation)
-    console.log(item.langName)
-} )
 
-//for each
-const values = coding.forEach((item)=>{
-    console.log(item)
-    return item
-})
-console.log(values)
+// coding.forEach((item)=>{
+//     console.log(item.languageNmae)
+// })
+
+//forEach doesn;t return values
+// const values=coding.forEach((item)=>{
+//     console.log(item)
+//     return item
+// })
+// console.log(values)
+
+const myNums=[1,2,3,4,5,6,7]
+// const newNums=myNums.filter((num)=>num>4)
+// const newNums=myNums.filter((num)=>{
+//     return num>4
+// })
+// console.log(newNums)
+
+
+// const newNums=[]
+// myNums.forEach((num)=>{
+//     if(num>4){
+//         newNums.push(num)
+//     }
+// })
+// console.log(newNums)
+
+// const newNums=myNums.map((num)=>num+10)
+// console.log(newNums)
+
+const newNums=myNums
+                .map((num)=>num*10)
+                .map((num)=>num+1)
+                .filter((num)=>num>=40)
+
+console.log(newNums)
+
+const myNumbers=[1,2,3]
+// const myTotal=myNumbers.reduce(function(acc,currval){
+//     console.log(`acc:${acc} and currval: ${currval}`);
+//     return acc+currval
+// },0)
+
+// const myTotal = myNumbers.reduce((acc,currval)=>acc+currval,0)
+// console.log(myTotal)
+
+const shoppingCart=[
+    {
+        itemName:"jscourse",
+        price:2990
+    },
+    {
+        itemName:"webdevcourse",
+        price:1990
+    },
+    {
+        itemName:"pycourse",
+        price:2990
+    },
+    {
+        itemName:"datasciencecourse",
+        price:4990
+    }
+]
+const price=shoppingCart.reduce((acc,item)=>acc + item.price,0)
+console.log(price)
