@@ -1,4 +1,4 @@
-const requestURL="https://api.github.com/users/hiteshchoudhary"
+const requestURL="https://api.github.com/users/Maitri2302"
 
 const xhr=new XMLHttpRequest()
 xhr.open('GET',requestURL)
