@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+    min-height: 100vh;
+    padding: 30px;
+}
+
+#search {
+    display: block;
+    width: 300px;
+    padding: 15px 20px;
+    margin: 0 auto 30px auto;
+
+    background: #111;
+    color: white;
+
+    border: 1px solid #333;
+    border-radius: 10px;
+    outline: none;
+
+    font-size: 16px;
+}
+
+#search::placeholder {
+    color: #888;
+}
+
+#users-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    position: relative;
+
+    width: 200px;
+    height: 300px;
+
+    overflow: hidden;
+    border-radius: 28px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.bg-img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+.blurred-layer {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(10px);
+
+    z-index: 1;
+
+    mask-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0)
+    );
+
+    -webkit-mask-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0)
+    );
+}
+
+.content {
+    position: absolute;
+
+    bottom: 20px;
+    left: 20px;
+    right: 15px;
+
+    color: white;
+
+    z-index: 2;
+}
+
+.content h3 {
+    font-size: 12px;
+    margin: 0 0 8px 0;
+}
+
+.content p {
+    font-size: 14px;
+    font-weight: bold;
+
+    color: #ddd;
+
+    line-height: 1.4;
+    margin: 0;
+}
