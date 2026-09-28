@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        html,
+        body{
+            height: 100%;
+            width: 100%;
+        }
+        #main{
+            background-color: #333;
+            height: 100%;
+            width:100%;
+            padding: 2rem; 
+        }
+        small{
+            color:red;
+            font-size: 12px;
+        }
+        #hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <form>
+            <input required type="text" id="name" placeholder="name">
+            <br>
+            <div id="hide">
+                <small>name should be larger than 2 characters</small>
+            </div>
+            <br> <br>
+            <input type="email" placeholder="email">
+            <br> <br>
+            <input type="password" placeholder="password">
+            <br> <br>
+            <select>
+                <option value="select" disabled></option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <br> <br>
+            <textarea name="" id="" placeholder="Tell us about you..."></textarea>
+            <br> <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+</body>
+</html>
