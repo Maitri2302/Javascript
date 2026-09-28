@@ -47,6 +47,11 @@ function showUsers(arr) {
 
     container.innerHTML = "";
 
+    if (arr.length === 0) {
+    container.innerHTML = `<h2 class="no-user">No user found</h2>`;
+    return;
+}
+
     arr.forEach(function (user) {
         const card = document.createElement("div");
         card.classList.add("card");
