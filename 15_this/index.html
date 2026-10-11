@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>User Management</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 min-h-screen">
+
+    <form autocomplete="off" id="userForm"
+        class="bg-white/90 backdrop-blur rounded-2xl shadow-xl pl-4 pr-4 pt-3 mb-8 w-full max-w-md mx-auto mt-8">
+        <h2 class="text-3xl font-bold mb-6 text-center text-blue-700">
+            Add User
+        </h2>
+        <div class="mb-3">
+            <label class="block text-gray-700 font-medium mb-2" for="name">
+                Name
+            </label>
+            <input class="w-full px-4 py-2 border border-blue-200 rounded-lg" type="text" id="name" name="name"
+                required>
+        </div>
+        <div class="mb-3">
+            <label class="block text-gray-700 font-medium mb-2" for="role">
+                Role
+            </label>
+            <input class="w-full px-4 py-2 border border-blue-200 rounded-lg" type="text" id="role" name="role"
+                required>
+        </div>
+        <div class="mb-3">
+            <label class="block text-gray-700 font-medium mb-2" for="bio">
+                Bio
+            </label>
+            <textarea class="w-full px-4 py-2 border border-blue-200 rounded-lg" id="bio" name="bio" rows="3"
+                required></textarea>
+        </div>
+        <div class="mb-3">
+            <label class="block text-gray-700 font-medium mb-2" for="photo">
+                Photo URL
+            </label>
+            <input class="w-full px-4 py-2 border border-blue-200 rounded-lg" type="text" id="photo" name="photo"
+                accept="image/*" required>
+        </div>
+        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold">
+            Add User
+        </button>
+    </form>
+    <div class="users grid grid-cols-1 md:grid-cols-3 gap-10 px-6 max-w-6xl mx-auto"></div>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

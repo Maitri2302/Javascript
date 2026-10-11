@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #242424;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: white;
+}
+
+
+/* MAIN */
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+
+/* LEFT BUTTONS */
+
+.left-buttons {
+    position: absolute;
+
+    left: calc(50% - 145px);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.left-buttons button {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    border: 1px solid #444;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* CARD WRAPPER */
+
+.card-wrapper {
+    position: relative;
+
+    width: 225px;
+    height: 180px;
+}
+
+
+/* ALL CARDS */
+
+.card {
+    position: absolute;
+
+    width: 225px;
+    height: 168px;
+
+    border: 1px solid #4b4b4b;
+
+    border-radius: 12px;
+}
+
+
+/* BACK CARDS */
+
+.card-2 {
+    top: 7px;
+    left: 3px;
+
+    opacity: 0.5;
+}
+
+.card-3 {
+    top: 14px;
+    left: 6px;
+
+    opacity: 0.25;
+}
+
+
+/* MAIN CARD */
+
+.card-main {
+    top: 0;
+    left: 0;
+
+    background: #242424;
+
+    padding: 15px;
+
+    z-index: 5;
+}
+
+
+/* PROFILE IMAGE */
+
+.top img {
+    width: 31px;
+    height: 31px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    display: block;
+
+    margin-bottom: 10px;
+}
+
+
+/* NAME */
+
+.details h2 {
+    font-size: 16px;
+
+    margin-bottom: 9px;
+}
+
+
+/* INFORMATION */
+
+.info {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 8px;
+
+    font-size: 11px;
+}
+
+.info span:first-child {
+    color: #ddd;
+}
+
+.info span:last-child {
+    color: #eee;
+
+    text-align: right;
+}
+
+
+/* ACTIONS */
+
+.actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 8px;
+}
+
+.actions button {
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+.actions .call {
+    background: #050505;
+
+    padding: 6px 10px;
+
+    border-radius: 15px;
+}
+
+
+/* COLOR BUTTONS */
+
+.colors {
+    position: absolute;
+
+    left: calc(50% + 145px);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.color {
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+
+    border: 1px solid #111;
+
+    cursor: pointer;
+}
+
+.black {
+    background: #000;
+}
+
+.purple {
+    background: #380066;
+}
+
+.brown {
+    background: #542400;
+}
+
+.green {
+    background: #079889;
+}
